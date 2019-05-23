@@ -45,6 +45,6 @@ LIST *create_hub(LIST *previous, unsigned int val) {
 	return ptr;
 }
 
-void balance_list(LIST *ptr) {
+void sort_list(LIST *ptr) {
 	//!!!!!!!!!!!!!!!!!!!!!!
 }
