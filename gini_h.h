@@ -4,12 +4,11 @@
 #include <stdio.h>
 
 typedef struct LIST {
-	struct LIST *prev;
 	struct LIST *next;
 	unsigned int value;
 } LIST;
-
-LIST *create_hub(LIST *previous, unsigned int val);
+LIST *create_hub(LIST *data, unsigned int val);
+LIST *sort_list(LIST *head);
 LIST *parse(FILE *input);
 void gini(FILE *input, char *arg);
 
