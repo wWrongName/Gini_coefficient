@@ -2,6 +2,7 @@
 #define _GINI_
 
 #include <stdio.h>
+#include <math.h>
 
 typedef struct LIST {
 	struct LIST *next;
@@ -9,7 +10,8 @@ typedef struct LIST {
 } LIST;
 LIST *create_hub(LIST *data, unsigned int val);
 LIST *sort_list(LIST *head);
+LIST *free_data(LIST *data);
 LIST *parse(FILE *input);
-void gini(FILE *input, char *arg);
+void gini(FILE *input);
 
 #endif
