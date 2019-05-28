@@ -63,34 +63,6 @@ LIST *create_hub(LIST *data, unsigned int val) {
 	return data;
 }
 
-LIST *sort_list(LIST *head) {
-	LIST *tmp, *swap_ptr, *pre_ptr, *ptr;
-	char increase = 1;
-	while(increase) {
-		increase = 0;
-		pre_ptr = tmp = head;
-		ptr = head->next;
-		while (ptr != NULL) {
-			if (pre_ptr->value > ptr->value) {
-				if (tmp == pre_ptr)
-					head = ptr;
-				else
-					tmp->next = ptr;
-				pre_ptr->next = ptr->next;
-				ptr->next = pre_ptr;
-				swap_ptr = pre_ptr;
-				pre_ptr = ptr;
-				ptr = swap_ptr;
-				increase = 1;
-			}
-			tmp = pre_ptr;
-			pre_ptr = pre_ptr->next;
-			ptr = ptr->next;
-		}
-	}
-	return head;
-}
-
 LIST *free_data(LIST *data) {
 	if (data->next != NULL)
 		data->next = free_data(data->next);
